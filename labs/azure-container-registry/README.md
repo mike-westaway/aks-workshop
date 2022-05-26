@@ -54,7 +54,7 @@ Here, you'll clone the repository and then build the Docker image using the incl
 1. Clone the repository to your Cloud Shell.
 
     ```bash
-    git clone https://github.com/KocSistem/aks-workshop.git
+    git clone https://github.com/mike-westaway/aks-workshop.git
     ```
 2. Change into the newly-cloned directory.
 
@@ -79,7 +79,7 @@ The steps you follow are the same as you previously followed. Clone the reposito
 1. First, change back to the home directory.
 
     ```bash
-    cd ..
+    cd ../../..
     ```
 2. Clone the ratings-web repo.
 
