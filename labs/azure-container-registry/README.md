@@ -81,7 +81,7 @@ The steps you follow are the same as you previously followed. Clone the reposito
     ```bash
     cd ../../..
     ```
-2. Clone the ratings-web repo.
+2. Goto the ratings-web repo.
 
     ```bash
     cd aks-workshop/apps/ratings-web/
