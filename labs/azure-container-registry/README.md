@@ -128,7 +128,7 @@ Let's integrate the container registry with the existing AKS cluster by supplyin
     --attach-acr $ACR_NAME
     
 
-    >If you are getting error like this:
+If you are getting error like this:
 
     Waiting for AAD role to propagate[################################ ] 90.0000%
     Could not create a role assignment for ACR. Are you an Owner on this subscription?   
