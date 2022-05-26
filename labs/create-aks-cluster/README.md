@@ -162,8 +162,8 @@ You can use the Azure Cloud Shell accessible at https://shell.azure.com once you
 	Get the latest available Kubernetes version for the region
 
 	``` bash
-	#In this lab this will be `1.22.6`#
-	VERSION=1.22.6
+	#In this lab this will be `1.23.5`#
+	VERSION=1.23.5
 
 	<!-- VERSION=$(az aks get-versions \
     --location $REGION_NAME \
