@@ -88,22 +88,22 @@ Let's Encrypt is a nonprofit Certificate Authority that provides TLS certificate
     apiVersion: cert-manager.io/v1
     kind: ClusterIssuer
     metadata:
-    name: letsencrypt
+      name: letsencrypt
     spec:
-    acme:
+      acme:
         # You must replace this email address with your own.
         # Let's Encrypt will use this to contact you about expiring
         # certificates, and issues related to your account.
         email: <your email>
         server: https://acme-v02.api.letsencrypt.org/directory
         privateKeySecretRef:
-        # Secret resource that will be used to store the account's private key.
-        name: letsencrypt
+          # Secret resource that will be used to store the account's private key.
+          name: letsencrypt
         # Add a single challenge solver, HTTP01 using nginx
         solvers:
         - http01:
             ingress:
-            class: nginx
+              class: nginx
     ```
 In the `email` key, you'll update the value by replacing `<your email>` with a valid certificate administrator email from your organization.
 3. To save the file, press `Ctrl+C` and `:wq!+Enter`. 
@@ -135,28 +135,29 @@ The last part of the configuration is to configure the Kubernetes Ingress file f
     apiVersion: networking.k8s.io/v1
     kind: Ingress
     metadata:
-    name: ratings-web-ingress
-    namespace: ratingsapp
-    annotations:
+      name: ratings-web-ingress
+      namespace: ratingsapp
+      annotations:
         nginx.ingress.kubernetes.io/rewrite-target: /
         cert-manager.io/cluster-issuer: letsencrypt
+        acme.cert-manager.io/http01-edit-in-place: "true"
     spec:
-    ingressClassName: nginx
-    rules:
-    - host: frontend.<ingress ip>.nip.io # IMPORTANT: update <ingress ip> with the dashed public IP of your ingress, for example frontend.13-68-177-68.nip.io
-        http:
-        paths:
-        - path: /
-            pathType: Prefix
-            backend:
-            service:
-                name: ratings-web
-                port:
-                number: 80
-    tls:
+      ingressClassName: nginx
+      tls:
         - hosts:
         - frontend.<ingress ip>.nip.io # IMPORTANT: update <ingress ip> with the dashed public IP of your ingress, for example frontend.13-68-177-68.nip.io
         secretName: ratings-web-cert
+      rules:
+      - host: frontend.<ingress ip>.nip.io # IMPORTANT: update <ingress ip> with the dashed public IP of your ingress, for example frontend.13-68-177-68.nip.io
+        http:
+          paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ratings-web
+                port:
+                  number: 80
 
     ```
 In this file, update the `<ingress ip>` value in the `host` key with the dashed public IP of the ingress you retrieved earlier, for example, `frontend.13.68.177.68.nip.io`. This value allows you to access the ingress via a host name instead of an IP address.
