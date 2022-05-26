@@ -161,7 +161,7 @@ Let's set up an ingress resource with a route to the ratings-web service.
                   number: 80
     ```
 
-In this file, update the `<ingress ip>` value in the `host` key with the dashed public IP of your ingress that you retrieved earlier, for example, `frontend.13.68.177.68.nip.io`. This value allows you to access the ingress via a host name instead of an IP address. In the next unit, you'll configure SSL/TLS on that host name.
+In this file, update the `<ingress ip>` value in the `host` key with the dashed public IP of your ingress that you retrieved earlier, for example, `frontend-13-68-177-68.nip.io`. This value allows you to access the ingress via a host name instead of an IP address. In the next unit, you'll configure SSL/TLS on that host name.
 
     >In this example, you use nip.io, which is a free service that provides wildcard DNS. You can use alternatives such as xip.io or sslip.io. Alternatively, you can use your domain name and set up the proper DNS records.
 
