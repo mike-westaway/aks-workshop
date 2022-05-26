@@ -103,7 +103,7 @@ You can use the Azure Cloud Shell accessible at https://shell.azure.com once you
 1. Create an Azure Resource Group for your resources to deploy into. (In this lab this will be `westeurope`)
 
 	```bash
-	RESOURCE_GROUP=ks-aksworkshop
+	RESOURCE_GROUP=my-aksworkshop
 	echo export RESOURCE_GROUP=$RESOURCE_GROUP >> ~/.bashrc
 
 	# Set Region (REGION_NAME)
@@ -153,7 +153,7 @@ You can use the Azure Cloud Shell accessible at https://shell.azure.com once you
 
 	```bash
 	# Set AKS Cluster Name
-	AKS_CLUSTER_NAME=ks-aksworkshop${UNIQUE_SUFFIX}
+	AKS_CLUSTER_NAME=my-aksworkshop${UNIQUE_SUFFIX}
 	# Look at AKS Cluster Name for Future Reference
 	echo $AKS_CLUSTER_NAME
 	
