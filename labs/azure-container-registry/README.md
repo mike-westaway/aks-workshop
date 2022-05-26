@@ -54,7 +54,7 @@ Here, you'll clone the repository and then build the Docker image using the incl
 1. Clone the repository to your Cloud Shell.
 
     ```bash
-    git clone https://github.com/mike-westaway/aks-workshop.git
+    #git clone https://github.com/mike-westaway/aks-workshop.git
     ```
 2. Change into the newly-cloned directory.
 
