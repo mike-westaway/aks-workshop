@@ -183,10 +183,6 @@ You'll see a similar output like the following example. Notice how the `ENDPOINT
 Make note of that EXTERNAL-IP, for example, `13.90.152.99`. You'll use the address to access the application.
 
 
-
-
-#### Next Lab: [Exercise - Deploy the ratings front end](../ratings-web/README.md)
-
 ## Test the application
 Now that the ratings-web service has a public IP, open the IP in a web browser, for example, at http://13.90.152.99, to view and interact with the application.
 
