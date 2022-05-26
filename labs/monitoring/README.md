@@ -118,14 +118,14 @@ In this exercise, you'll set up ClusterRoles and ClusterRoleBindings that aren't
         name: containerHealth-log-reader
     rules:
     - apiGroups: ["", "metrics.k8s.io", "extensions", "apps"]
-    resources:
-    - "pods/log"
-    - "events"
-    - "nodes"
-    - "pods"
-    - "deployments"
-    - "replicasets"
-    verbs: ["get", "list"]
+      resources:
+      - "pods/log"
+      - "events"
+      - "nodes"
+      - "pods"
+      - "deployments"
+      - "replicasets"
+      verbs: ["get", "list"]
     ---
     apiVersion: rbac.authorization.k8s.io/v1
     kind: ClusterRoleBinding
@@ -137,8 +137,8 @@ In this exercise, you'll set up ClusterRoles and ClusterRoleBindings that aren't
         apiGroup: rbac.authorization.k8s.io
     subjects:
     - kind: User
-    name: clusterUser
-    apiGroup: rbac.authorization.k8s.io
+      name: clusterUser
+      apiGroup: rbac.authorization.k8s.io
     ```
 3. To save the file, press `Ctrl+C` and `:wq!+Enter`. 
 
