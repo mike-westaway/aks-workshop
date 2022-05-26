@@ -26,13 +26,13 @@ In this exercise, you will:
     ```bash
     echo $UNIQUE_SUFFIX
     # Set Azure Container Registry Name
-    ACR_NAME=ks-acr$UNIQUE_SUFFIX
+    ACR_NAME=acr$UNIQUE_SUFFIX
    
     echo export ACR_NAME=$ACR_NAME >> ~/.bashrc
     # Create Azure Container Registry
     az acr create \
         --resource-group $RESOURCE_GROUP  \
-        --REGION_NAME  $REGION_NAME  \
+        --location  $REGION_NAME  \
         --name $ACR_NAME \
         --sku Standard
     ```
