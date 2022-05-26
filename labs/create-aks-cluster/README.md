@@ -127,7 +127,7 @@ You can use the Azure Cloud Shell accessible at https://shell.azure.com once you
 
 	az network vnet create \
     	--resource-group $RESOURCE_GROUP \
-    	--REGION_NAME $REGION_NAME \
+    	--location $REGION_NAME \
     	--name $VNET_NAME \
     	--address-prefixes 10.0.0.0/8 \
     	--subnet-name $SUBNET_NAME \
