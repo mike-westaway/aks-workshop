@@ -186,7 +186,8 @@ You can use the Azure Cloud Shell accessible at https://shell.azure.com once you
 	--service-cidr 10.2.0.0/24 \
 	--dns-service-ip 10.2.0.10 \
 	--docker-bridge-address 172.17.0.1/16 \
-	--generate-ssh-keys
+	--generate-ssh-keys \
+	--node-vm-size standard_d2ads_v5
 	```
 2. Verify your cluster status. The `ProvisioningState` should be `Succeeded`
 
