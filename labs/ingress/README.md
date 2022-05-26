@@ -153,11 +153,11 @@ Let's set up an ingress resource with a route to the ratings-web service.
         http:
         paths:
         - path: /
-            pathType: Prefix
-            backend:
+          pathType: Prefix
+          backend:
             service:
-                name: ratings-web
-                port:
+              name: ratings-web
+              port:
                 number: 80
     ```
 
