@@ -111,7 +111,7 @@ You can use the Azure Cloud Shell accessible at https://shell.azure.com once you
 	echo export REGION_NAME=$REGION_NAME >> ~/.bashrc
 
 	# Create Resource Group
-	az group create --name $RESOURCE_GROUP --REGION_NAME $REGION_NAME
+	az group create --name $RESOURCE_GROUP --location $REGION_NAME
 	```
 
 ## Configure networking
