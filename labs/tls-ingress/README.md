@@ -95,7 +95,7 @@ Let's Encrypt is a nonprofit Certificate Authority that provides TLS certificate
         # Let's Encrypt will use this to contact you about expiring
         # certificates, and issues related to your account.
         email: <your email>
-        server: https://acme-staging-v02.api.letsencrypt.org/directory
+        server: https://acme-v02.api.letsencrypt.org/directory
         privateKeySecretRef:
         # Secret resource that will be used to store the account's private key.
         name: letsencrypt
