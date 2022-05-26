@@ -145,8 +145,8 @@ The last part of the configuration is to configure the Kubernetes Ingress file f
       ingressClassName: nginx
       tls:
         - hosts:
-        - frontend.<ingress ip>.nip.io # IMPORTANT: update <ingress ip> with the dashed public IP of your ingress, for example frontend.13-68-177-68.nip.io
-        secretName: ratings-web-cert
+          - frontend.<ingress ip>.nip.io # IMPORTANT: update <ingress ip> with the dashed public IP of your ingress, for example frontend.13-68-177-68.nip.io
+          secretName: ratings-web-cert
       rules:
       - host: frontend.<ingress ip>.nip.io # IMPORTANT: update <ingress ip> with the dashed public IP of your ingress, for example frontend.13-68-177-68.nip.io
         http:
