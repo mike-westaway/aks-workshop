@@ -38,7 +38,7 @@ You can use the Azure Cloud Shell accessible at https://shell.azure.com once you
 1. Once your cloud shell is started, clone the workshop repo into the cloud shell environment
 
 	```bash
-	git clone https://github.com/KocSistem/aks-workshop
+	git clone https://github.com/mike-westaway/aks-workshop
 	```
 
 2. Ensure you are using the correct Azure subscription you want to deploy AKS to
