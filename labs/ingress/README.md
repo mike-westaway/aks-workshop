@@ -142,14 +142,14 @@ Let's set up an ingress resource with a route to the ratings-web service.
     apiVersion: networking.k8s.io/v1
     kind: Ingress
     metadata:
-    name: ratings-web-ingress
-    namespace: ratingsapp
-    annotations:
+      name: ratings-web-ingress
+      namespace: ratingsapp
+      annotations:
         nginx.ingress.kubernetes.io/rewrite-target: /
     spec:
-    ingressClassName: nginx
-    rules:
-    - host: frontend.<ingress-external-ip>.nip.io
+      ingressClassName: nginx
+      rules:
+      - host: frontend.<ingress-external-ip>.nip.io
         http:
         paths:
         - path: /
