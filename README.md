@@ -46,7 +46,7 @@ The application consists of 3 components:
 ## Labs
 
 #### Start with:
-1. [Exercise - Deploy Kubernetes with Azure Kubernetes Servicer](labs/create-aks-cluster/README.md)
+1. [Exercise - Deploy Kubernetes with Azure Kubernetes Service](labs/create-aks-cluster/README.md)
 2. [Exercise - Create a private, highly available container registry](labs/azure-container-registry/README.md)
 3. [Exercise - Deploy MongoDB](labs/deploy-mongodb/README.md)
 4. [Exercise - Deploy the ratings API](labs/ratings-api/README.md)
