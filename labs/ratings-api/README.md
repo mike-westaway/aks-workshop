@@ -46,7 +46,7 @@ A Kubernetes deployment gives you a way to provide declarative updates for pods.
             env:
             - name: MONGODB_URI # the application expects to find the MongoDB connection details in this environment variable
               valueFrom:
-                `secretKeyRef`:
+                secretKeyRef:
                   name: mongosecret # the name of the Kubernetes secret containing the data
                   key: MONGOCONNECTION # the key inside the Kubernetes secret containing the data
             resources:
